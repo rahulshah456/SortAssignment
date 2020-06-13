@@ -6,5 +6,18 @@
 
 
     <color name="text_color_primary">#FFFFFF</color>
+    <color name="text_color_adaptable">#FFFFFF</color>
+    <color name="text_color_light_adaptable">#80E5E5E5</color>
     <color name="splash_background">#212121</color>
+    <color name="light_border">#80616161</color>
+    <color name="rv_item_background">#424242</color>
+
+
+    <color name="status_background_onboarded">#4040EDAF</color>
+    <color name="status_background_left">#400099FF</color>
+    <color name="status_background_active">#40FF8A8A</color>
+
+    <color name="status_color_onboarded">#40EDAF</color>
+    <color name="status_color_left">#0099FF</color>
+    <color name="status_color_active">#FF8A8A</color>
 </resources>

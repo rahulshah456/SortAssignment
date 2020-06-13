@@ -3,30 +3,163 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="180dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginBottom="8dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
     app:cardCornerRadius="8dp">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/item_background">
+        android:background="@color/rv_item_background">
 
-        <TextView
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/item_background"
+            android:contentDescription="@string/profile_pic" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="18dp"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="@color/light_border"
+            app:civ_border_width="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sample Profile"
-            android:fontFamily="@font/montserrat"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_centerInParent="true"/>
+            android:layout_marginStart="18dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/circleImageView"
+            app:layout_constraintTop_toTopOf="parent">
 
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/elliot_anderson"
+                android:textColor="@color/text_color_adaptable"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/security_engineer"
+                android:textAllCaps="true"
+                android:textColor="@color/text_color_light_adaptable"
+                android:textSize="14sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardCornerRadius="18dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/status_background_onboarded">
 
 
+                    <ImageView
+                        android:id="@+id/iv_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/onboarded_24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="4dp"
+                        android:tint="@color/status_color_onboarded"
+                        android:contentDescription="@string/status" />
+
+
+                    <TextView
+                        android:id="@+id/tv_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/onboarded"
+                        android:textStyle="bold"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="12dp"
+                        android:textColor="@color/status_color_onboarded"
+                        android:fontFamily="@font/montserrat"
+                        android:layout_gravity="center"
+                        android:textSize="12sp"/>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.75"
+            app:layout_constraintStart_toEndOf="@+id/ll_account"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.505">
+
+            <TextView
+                android:id="@+id/tv_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/age"
+                android:textColor="@color/rv_item_background"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/female"
+                android:textAllCaps="true"
+                android:layout_marginTop="-8dp"
+                android:textColor="@color/rv_item_background"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.cardview.widget.CardView>
