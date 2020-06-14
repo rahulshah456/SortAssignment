@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity(), ClickListener {
     }
 
 
-
+    // main assignment function for sorted list
     private fun generateSortedList(users: List<User>){
         val distinctUsers =  users.distinctBy { it.status }.sortedBy { it.status }
         for (user in distinctUsers){
