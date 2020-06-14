@@ -6,6 +6,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:clickable="true"
     android:focusable="true"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
     android:foreground="?attr/selectableItemBackground"
     app:cardCornerRadius="8dp">
 
@@ -26,11 +29,11 @@
 
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/circleImageView"
+            android:id="@+id/civ_profile_pic"
             android:layout_width="96dp"
             android:layout_height="96dp"
             android:layout_marginStart="18dp"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/avatar_24dp"
             app:civ_border_color="@color/light_border"
             app:civ_border_width="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -45,18 +48,18 @@
             android:layout_marginStart="18dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/circleImageView"
+            app:layout_constraintStart_toEndOf="@+id/civ_profile_pic"
             app:layout_constraintTop_toTopOf="parent">
 
 
             <TextView
                 android:id="@+id/tv_name"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"
                 android:text="@string/elliot_anderson"
                 android:textColor="@color/text_color_adaptable"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -92,7 +95,7 @@
                         android:id="@+id/iv_status"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/onboarded_24dp"
+                        android:src="@drawable/status_onboarded_24dp"
                         android:layout_gravity="center"
                         android:layout_marginStart="4dp"
                         android:tint="@color/status_color_onboarded"
@@ -105,12 +108,12 @@
                         android:layout_height="wrap_content"
                         android:text="@string/onboarded"
                         android:textStyle="bold"
-                        android:layout_marginStart="4dp"
-                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="18dp"
                         android:textColor="@color/status_color_onboarded"
                         android:fontFamily="@font/montserrat"
                         android:layout_gravity="center"
-                        android:textSize="12sp"/>
+                        android:textSize="14sp"/>
 
 
                 </LinearLayout>
@@ -138,10 +141,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:fontFamily="@font/montserrat_bold"
                 android:text="@string/age"
                 android:textColor="@color/rv_item_background"
-                android:textSize="48sp"
+                android:textSize="42sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -151,9 +153,10 @@
                 android:fontFamily="@font/montserrat"
                 android:text="@string/female"
                 android:textAllCaps="true"
+                android:layout_gravity="center"
                 android:layout_marginTop="-8dp"
                 android:textColor="@color/rv_item_background"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
         </LinearLayout>

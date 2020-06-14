@@ -4,7 +4,9 @@
     <string name="security_engineer">Security Engineer</string>
     <string name="age">45</string>
     <string name="female">Female</string>
+    <string name="male">Male</string>
     <string name="onboarded">OnBoarded</string>
     <string name="profile_pic">ProfilePic</string>
     <string name="status">status</string>
+    <string name="show_hide">Show Hide</string>
 </resources>
